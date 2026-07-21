@@ -9,7 +9,7 @@ EXTRACT_DIR="/usr/local/dawn/out/cmake/cmake-4.4.0-linux-x86_64"
 
 SHA256=65757f442fdd242e27f1728fc26dc0cba4164f7a0791a5c788631c00080369bc
 
-LICENSE="Apache-2.0"
+LICENSE="BSD-3-Clause"
 KEYWORDS="~amd64 ~x86"
  
 DEPEND=""

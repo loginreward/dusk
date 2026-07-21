@@ -3,7 +3,10 @@
 DESCRIPTION="Vim-fork focused on extensibility and usability"
 HOMEPAGE="https://neovim.io"
 SRC_URI="https://github.com/neovim/neovim/archive/refs/tags/v0.12.4.tar.gz"
-DIR="/usr/local/dawn/out/neovim/v0.12.4"
+TAR_DIR="/usr/local/dawn/tars/neovim"
+EXTRACT_DIR="/usr/local/dawn/out/neovim/nvim-linux-x86_64"
+
+SHA256=2727da95d2b8b809bc7c71e085452e47dfe1d8aa7cfaa15c68004e23f6f0a6dd
  
 LICENSE="Apache-2.0"
 KEYWORDS="~amd64 ~x86"
@@ -13,7 +16,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 install() {
-	cd $DIR
+	cd $EXTRACT_DIR
 	sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
 }
 
