@@ -1,0 +1,20 @@
+#!/bin/bash
+
+DESCRIPTION="Vim-fork focused on extensibility and usability"
+HOMEPAGE="https://neovim.io"
+SRC_URI="https://github.com/neovim/neovim/archive/refs/tags/v0.12.4.tar.gz"
+DIR="/usr/local/dawn/out/neovim/v0.12.4"
+ 
+LICENSE="Apache-2.0"
+KEYWORDS="~amd64 ~x86"
+ 
+DEPEND="cmake ninja git"
+RDEPEND="${DEPEND}"
+BDEPEND=""
+
+install() {
+	cd $DIR
+	sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+}
+
+"$@"

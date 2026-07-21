@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DESCRIPTION="A Powerful Software Build System"
+VERSION=4.4.0
+HOMEPAGE="https://cmake.org"
+SRC_URI="https://github.com/Kitware/CMake/releases/download/v4.4.0/cmake-4.4.0-linux-x86_64.tar.gz"
+TAR_DIR="/usr/local/dawn/tars/cmake"
+EXTRACT_DIR="/usr/local/dawn/out/cmake/cmake-4.4.0-linux-x86_64"
+
+SHA256=3864eb649b4466ae126a64bbde1657adad78efbbaa068bf38201de5cf1b5349f
+
+LICENSE="Apache-2.0"
+KEYWORDS="~amd64 ~x86"
+ 
+DEPEND=""
+RDEPEND="${DEPEND}"
+BDEPEND=""
+
+install() {
+	cd $EXTRACT_DIR
+	sudo cp -ir * /usr/local/
+}
+
+"$@"
