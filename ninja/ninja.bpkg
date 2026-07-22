@@ -1,0 +1,26 @@
+#!/bin/bash
+
+DESCRIPTION="A Powerful Software Build System"
+VERSION=1.13.2
+NAME="ninja"
+HOMEPAGE="https://ninja-build.org"
+SRC_URI="https://github.com/ninja-build/ninja/archive/v$VERSION/$NAME-$VERSION.tar.gz"
+TAR_DIR="/usr/local/dawn/tars/ninja"
+EXTRACT_DIR="/usr/local/dawn/out/ninja"
+
+SHA256=146d5abb2cb693fbf171ab1abc1e696b5e03cfe39fbf1267dd65daa6b60f229b
+
+LICENSE="Apache-2.0"
+KEYWORDS="~amd64 ~x86"
+ 
+DEPEND="cmake"
+RDEPEND="${DEPEND}"
+BDEPEND=""
+
+install() {
+	cd $EXTRACT_DIR
+    cmake -Bbuild-cmake -DBUILD_TESTING=OFF
+    cmake --build build-cmake
+}
+
+"$@"
