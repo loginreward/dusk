@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESCRIPTION="A Powerful Software Build System"
+DESCRIPTION="a small build system with a focus on speed"
 VERSION=1.13.2
 NAME="ninja"
 HOMEPAGE="https://ninja-build.org"

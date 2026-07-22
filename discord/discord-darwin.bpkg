@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DESCRIPTION="Voice and text chat for 'gamers'"
+VERSION=1.0.150
+HOMEPAGE="https://discord.com"
+SRC_URI="https://discord.com/api/download?platform=osx"
+TAR_DIR="/usr/local/dawn/tars/discord"
+EXTRACT_DIR="/usr/local/dawn/out/discord/Discord.dmg"
+
+SHA256=568293a1f65fab2244b5acdac282b88b6f00efd87defd76cc77185d1b9caba64
+
+LICENSE="unfree"
+KEYWORDS="~amd64 ~x86"
+ 
+DEPEND=""
+RDEPEND="${DEPEND}"
+BDEPEND=""
+
+install() {
+    sudo hdiutil attach -nobrowse $TAR_DIR/Discord.dmg
+    sudo cp -r /Volumes/Discord/Discord.app $HOME/Applications
+}
+
+"$@"
