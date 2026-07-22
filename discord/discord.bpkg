@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESCRIPTION="Voice and text chat for 'gamers'"
+DESCRIPTION="All-in-one voice and text chat for gamers"
 VERSION=1.0.150
 HOMEPAGE="https://discord.com"
 SRC_URI="https://discord.com/api/download?platform=linux&format=tar.gz"
