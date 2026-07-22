@@ -1,0 +1,24 @@
+#!/bin/bash
+
+DESCRIPTION="A calm, privacy focused, and feature-packed firefox fork"
+# VERSION=4.4.0
+HOMEPAGE="https://zen-browser.app"
+SRC_URI="https://github.com/zen-browser/desktop/releases/download/1.21.8b/zen.macos-universal.dmg"
+TAR_DIR="/usr/local/dawn/tars/zen"
+EXTRACT_DIR="/usr/local/dawn/out/zen/zen.macos-universal"
+
+SHA256=4d54c527b1e18762a7d76b0ecf0ce959a29329fe0a68f737d97e644e13341e07
+
+LICENSE="MPL-2.0"
+KEYWORDS="~amd64 ~x86"
+ 
+DEPEND=""
+RDEPEND="${DEPEND}"
+BDEPEND=""
+
+install() {
+    sudo hdiutil attach -nobrowse $TAR_DIR/zen-browser-universal.dmg
+    sudo cp -r /Volumes/Zen/Zen.app $HOME/Applications
+}
+
+"$@"
