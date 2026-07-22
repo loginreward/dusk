@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 install() {
-    sudo hdiutil attach -nobrowse $TAR_DIR/zen-browser-universal.dmg
+    sudo hdiutil attach -nobrowse $TAR_DIR/zen-browser-darwin.dmg
     sudo cp -r /Volumes/Zen/Zen.app $HOME/Applications
 }
 
